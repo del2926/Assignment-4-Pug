@@ -1,0 +1,22 @@
+extends layouts/main-layout.pug
+
+block styles
+
+block content
+  main
+    h1 List of Users
+    if users.length > 0
+      table.user-list
+        tr
+          th First Name
+          th Last Name
+          th Email
+          th Phone Number
+        each user in users 
+          tr
+            td #{user.fname}
+            td #{user.lname}
+            td #{user.email}
+            td #{user.phone}
+    else
+      h1 No Users Found!

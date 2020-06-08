@@ -1,0 +1,21 @@
+extends layouts/main-layout.pug
+
+block styles
+  link(rel="stylesheet", href="/css/user.css")
+
+block content
+  main
+    form.user-form(action="/add-user", method="POST")
+      .form-control
+        label(for="fname") First Name:
+        input(type="text", name="fname")
+      .form-control
+        label(for="lname") Last Name:
+        input(type="text", name="lname")
+      .form-control
+        label(for="email") Email:
+        input(type="email", name="email")
+      .form-control
+        label(for="phone") Phone:
+        input(type="phone", name="phone")
+      button(type="submit") Add User
